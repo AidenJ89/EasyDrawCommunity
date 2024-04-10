@@ -278,8 +278,32 @@ const LayoutSlug = (props) => {
  * @param {*} props
  * @returns
  */
-const LayoutSearch = (props) => {
-  return <></>
+const LayoutSearch = props => {
+  const { keyword } = props
+  const router = useRouter()
+  const currentSearch = keyword || router?.query?.s
+
+  useEffect(() => {
+    if (currentSearch) {
+      replaceSearchResult({
+        doms: document.getElementsByClassName('replace'),
+        search: keyword,
+        target: {
+          element: 'span',
+          className: 'text-red-500 border-b border-dashed'
+        }
+      })
+    }
+  })
+  return (
+        <>
+            {!currentSearch
+              ? <SearchNave {...props} />
+              : <div id="posts-wrapper">
+                    {siteConfig('POST_LIST_STYLE') === 'page' ? <BlogPostListPage {...props} /> : <BlogPostListScroll {...props} />}
+                </div>}
+        </>
+  )
 }
 
 /**
