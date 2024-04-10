@@ -26,7 +26,7 @@ const BLOG = {
   KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'AI, AI绘画', // 网站关键词 英文逗号隔开
 
   // 社交链接，不需要可留空白，例如 CONTACT_WEIBO:''
-  CONTACT_EMAIL: process.env.NEXT_PUBLIC_CONTACT_EMAIL || '', // 邮箱地址 例如mail@tangly1024.com
+  CONTACT_EMAIL: process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'zhiweijiang1206@easydraw.ac.cn', // 邮箱地址 例如mail@tangly1024.com
   CONTACT_WEIBO: process.env.NEXT_PUBLIC_CONTACT_WEIBO || '', // 你的微博个人主页
   CONTACT_TWITTER: process.env.NEXT_PUBLIC_CONTACT_TWITTER || '', // 你的twitter个人主页
   CONTACT_GITHUB: process.env.NEXT_PUBLIC_CONTACT_GITHUB || '', // 你的github个人主页 例如 https://github.com/tangly1024
@@ -449,9 +449,9 @@ const BLOG = {
 
   // 作废配置
   AVATAR: process.env.NEXT_PUBLIC_AVATAR || '/avatar.svg', // 作者头像，被notion中的ICON覆盖。若无ICON则取public目录下的avatar.png
-  TITLE: process.env.NEXT_PUBLIC_TITLE || 'NotionNext BLOG', // 站点标题 ，被notion中的页面标题覆盖；此处请勿留空白，否则服务器无法编译
+  TITLE: process.env.NEXT_PUBLIC_TITLE || '易绘AI社区', // 站点标题 ，被notion中的页面标题覆盖；此处请勿留空白，否则服务器无法编译
   HOME_BANNER_IMAGE: process.env.NEXT_PUBLIC_HOME_BANNER_IMAGE || '/bg_image.jpg', // 首页背景大图, 会被notion中的封面图覆盖，若无封面图则会使用代码中的 /public/bg_image.jpg 文件
-  DESCRIPTION: process.env.NEXT_PUBLIC_DESCRIPTION || '这是一个由NotionNext生成的站点', // 站点描述，被notion中的页面描述覆盖
+  DESCRIPTION: process.env.NEXT_PUBLIC_DESCRIPTION || '这是一个有底蕴的AI社区', // 站点描述，被notion中的页面描述覆盖
 
   // 开发相关
   NOTION_ACCESS_TOKEN: process.env.NOTION_ACCESS_TOKEN || '', // Useful if you prefer not to make your database public
