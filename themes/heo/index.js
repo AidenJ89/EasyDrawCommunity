@@ -139,7 +139,7 @@ const LayoutBase = props => {
  */
 const LayoutIndex = props => {
     // 不要忘记在你的 props 中传递 "notices"
-  const { notices } = props;
+  const {notices} = props;
   return (
     <>
       <Swipe items={notices} />
