@@ -112,6 +112,7 @@ const LayoutBase = props => {
           <div className={`w-full h-auto ${className || ''}`}>
             {/* 主区上部嵌入 */}
             {slotTop}
+            {headerSlot}
             {children}
           </div>
 
