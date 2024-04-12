@@ -72,7 +72,7 @@ const LayoutBase = props => {
             <Hero {...props} />
         </>
         : null}
-
+      {fullWidth ? null : <PostHeader {...props} />}
     </header>
   )
 
@@ -154,6 +154,17 @@ const LayoutIndex = props => {
       </div>
   )
 }
+
+
+const slotLeft = props => {
+  return (
+      <div id="post-outer-wrapper" className="px-5 md:px-0">
+        {/* 文章分类条 */}
+        <InfoCard {...props} />
+      </div>
+  )
+}
+
 
 /**
  * 博客列表
