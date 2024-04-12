@@ -72,13 +72,10 @@ const LayoutBase = props => {
             <Hero {...props} />
         </>
         : null}
-      {fullWidth ? null : <PostHeader {...props} />}
+
     </header>
   )
 
-  // 左侧栏顶部 用户信息
-  const slotLeft = (router.route === '/404' || fullWidth) ? null : <InfoCard {...props} />
-       
   // 右侧栏 用户信息+标签列表
   const slotRight = (router.route === '/404' || fullWidth) ? null : <SideRight {...props} />
 
@@ -113,11 +110,6 @@ const LayoutBase = props => {
             `${HEO_HERO_BODY_REVERSE ? 'flex-row-reverse' : ''} w-full mx-auto lg:flex justify-center relative z-10`
           }
         >
-          
-          <div className={`w-full h-auto ${className || ''}`}>
-            {/* 主区上部嵌入 */}
-            {slotLeft}
-          </div>
             
           <div className={`w-full h-auto ${className || ''}`}>
             {/* 主区上部嵌入 */}
