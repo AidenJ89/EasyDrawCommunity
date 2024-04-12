@@ -32,6 +32,7 @@ import { Transition } from '@headlessui/react'
 import { Style } from './style'
 import { NoticeBar } from './components/NoticeBar'
 import { HashTag } from '@/components/HeroIcons'
+import { InfoCard } from './components/InfoCard'
 import LatestPostsGroup from './components/LatestPostsGroup'
 import FloatTocButton from './components/FloatTocButton'
 import replaceSearchResult from '@/components/Mark'
@@ -75,6 +76,9 @@ const LayoutBase = props => {
     </header>
   )
 
+  // 左侧栏顶部 用户信息
+  const slotLeft = (router.route === '/404' || fullWidth) ? null : <InfoCard {...props} />
+       
   // 右侧栏 用户信息+标签列表
   const slotRight = (router.route === '/404' || fullWidth) ? null : <SideRight {...props} />
 
@@ -109,9 +113,14 @@ const LayoutBase = props => {
             `${HEO_HERO_BODY_REVERSE ? 'flex-row-reverse' : ''} w-full mx-auto lg:flex justify-center relative z-10`
           }
         >
+          
           <div className={`w-full h-auto ${className || ''}`}>
             {/* 主区上部嵌入 */}
-            {slotRight}
+            {slotLeft}
+          </div>
+            
+          <div className={`w-full h-auto ${className || ''}`}>
+            {/* 主区上部嵌入 */}
             {slotTop}
             {children}
           </div>
