@@ -138,11 +138,7 @@ const LayoutBase = props => {
  * @returns
  */
 const LayoutIndex = props => {
-    // 不要忘记在你的 props 中传递 "notices"
-  const {notices} = props;
   return (
-    <>
-      <Swipe items={notices} />
       <div id="post-outer-wrapper" className="px-5 md:px-0">
         {/* 文章分类条 */}
         <CategoryBar {...props} />
@@ -154,7 +150,6 @@ const LayoutIndex = props => {
             <BlogPostListScroll {...props} />
             )}
       </div>
-    </>
   )
 }
 
@@ -164,7 +159,11 @@ const LayoutIndex = props => {
  * @returns
  */
 const LayoutPostList = props => {
+      // 不要忘记在你的 props 中传递 "notices"
+  const {notices} = props;
   return (
+    <>
+      <Swipe items={notices} />
       <div id="post-outer-wrapper" className="px-5  md:px-0">
         {/* 文章分类条 */}
         <CategoryBar {...props} />
@@ -176,6 +175,7 @@ const LayoutPostList = props => {
             <BlogPostListScroll {...props} />
             )}
       </div>
+  </>
   )
 }
 
