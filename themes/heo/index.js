@@ -163,7 +163,9 @@ const LayoutPostList = props => {
   const {notices} = props;
   return (
     <>
-      <Swipe items={notices} />
+      <div className="w-full h-full hover:text-indigo-600 flex justify-center items-center">
+        <Swipe items={notices} />
+      </div>
       <div id="post-outer-wrapper" className="px-5  md:px-0">
         {/* 文章分类条 */}
         <CategoryBar {...props} />
