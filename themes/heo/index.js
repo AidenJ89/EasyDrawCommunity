@@ -141,6 +141,12 @@ const LayoutBase = props => {
  */
 const LayoutIndex = props => {
   return (
+    <>   
+         {/* 公告栏 */}
+       <div id="post-outer-wrapper" className="px-5 md:px-0">
+         <Announcement post={notice} style={{ color: 'white !important' }} />
+       </div>
+      
       <div id="post-outer-wrapper" className="px-5 md:px-0">
         {/* 文章分类条 */}
         <CategoryBar {...props} />
@@ -152,19 +158,9 @@ const LayoutIndex = props => {
             <BlogPostListScroll {...props} />
             )}
       </div>
+    </>
   )
 }
-
-
-const slotLeft = props => {
-  return (
-      <div id="post-outer-wrapper" className="px-5 md:px-0">
-        {/* 文章分类条 */}
-        <InfoCard {...props} />
-      </div>
-  )
-}
-
 
 /**
  * 博客列表
