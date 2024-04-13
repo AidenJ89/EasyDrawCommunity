@@ -141,13 +141,11 @@ const LayoutBase = props => {
  */
 const LayoutIndex = props => {
   return (
-    <>   
-         {/* 公告栏 */}
-      <Announcement {...props} />
-      
       <div id="post-outer-wrapper" className="px-5 md:px-0">
         {/* 文章分类条 */}
         <CategoryBar {...props} />
+         {/* 公告栏 */}
+        <Announcement {...props} />
         {siteConfig('POST_LIST_STYLE') === 'page'
           ? (
             <BlogPostListPage {...props} />
@@ -156,7 +154,6 @@ const LayoutIndex = props => {
             <BlogPostListScroll {...props} />
             )}
       </div>
-    </>
   )
 }
 
@@ -170,6 +167,8 @@ const LayoutPostList = props => {
       <div id="post-outer-wrapper" className="px-5  md:px-0">
         {/* 文章分类条 */}
         <CategoryBar {...props} />
+        {/* 公告栏 */}
+        <Announcement {...props} />
         {siteConfig('POST_LIST_STYLE') === 'page'
           ? (
             <BlogPostListPage {...props} />
