@@ -32,7 +32,7 @@ import { Transition } from '@headlessui/react'
 import { Style } from './style'
 import { NoticeBar } from './components/NoticeBar'
 import { HashTag } from '@/components/HeroIcons'
-import { InfoCard } from './components/InfoCard'
+import { Announcement } from './components/Announcement'
 import LatestPostsGroup from './components/LatestPostsGroup'
 import FloatTocButton from './components/FloatTocButton'
 import replaceSearchResult from '@/components/Mark'
@@ -143,9 +143,7 @@ const LayoutIndex = props => {
   return (
     <>   
          {/* 公告栏 */}
-       <div id="post-outer-wrapper" className="px-5 md:px-0">
-         <Announcement post={notice} style={{ color: 'white !important' }} />
-       </div>
+      <Announcement {...props} />
       
       <div id="post-outer-wrapper" className="px-5 md:px-0">
         {/* 文章分类条 */}
