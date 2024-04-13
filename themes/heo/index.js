@@ -61,6 +61,7 @@ const LayoutBase = props => {
 
   const headerSlot = (
     <header>
+      <meta name="referrer" content="no-referrer"/>
       {/* 顶部导航 */}
       <NavBar {...props} />
 
