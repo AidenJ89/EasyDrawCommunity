@@ -32,7 +32,6 @@ import { Transition } from '@headlessui/react'
 import { Style } from './style'
 import { NoticeBar } from './components/NoticeBar'
 import { HashTag } from '@/components/HeroIcons'
-import { Announcement } from '@/themes/nav/components/Announcement'
 import LatestPostsGroup from './components/LatestPostsGroup'
 import FloatTocButton from './components/FloatTocButton'
 import replaceSearchResult from '@/components/Mark'
@@ -144,8 +143,6 @@ const LayoutIndex = props => {
       <div id="post-outer-wrapper" className="px-5 md:px-0">
         {/* 文章分类条 */}
         <CategoryBar {...props} />
-         {/* 公告栏 */}
-        <Announcement {...props} />
         {siteConfig('POST_LIST_STYLE') === 'page'
           ? (
             <BlogPostListPage {...props} />
@@ -167,8 +164,6 @@ const LayoutPostList = props => {
       <div id="post-outer-wrapper" className="px-5  md:px-0">
         {/* 文章分类条 */}
         <CategoryBar {...props} />
-        {/* 公告栏 */}
-        <Announcement {...props} />
         {siteConfig('POST_LIST_STYLE') === 'page'
           ? (
             <BlogPostListPage {...props} />
