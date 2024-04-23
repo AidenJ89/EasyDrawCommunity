@@ -108,7 +108,7 @@ const CONFIG = {
   HEO_SOCIAL_CARD_TITLE_1: '实操交流频道',
   HEO_SOCIAL_CARD_TITLE_2: '加入我们社群共同实践成长',
   HEO_SOCIAL_CARD_TITLE_3: '点击加入社群',
-  HEO_SOCIAL_CARD_URL: 'https://easydraw.ac.cn/article/2dd95a33-e175-43f8-9d43-6ca31ac32084',
+  HEO_SOCIAL_CARD_URL: 'https://easydraw.ac.cn/article/recruitment',
 
   // *****  以下配置无效，只是预留开发 ****
   // 菜单配置
