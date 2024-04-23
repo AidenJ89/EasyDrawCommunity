@@ -6,7 +6,7 @@ const CONFIG = {
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
     { title: '欢迎来到易绘AI社区', url: 'https://easydraw.ac.cn' },
-    { title: '新人必看社区指南快速成长', url: 'https://easydraw.ac.cn/newmumber' }
+    { title: '新人必看社区指南快速成长', url: 'https://easydraw.ac.cn/about' }
   ],
 
   // 英雄区左右侧组件颠倒位置
@@ -20,7 +20,7 @@ const CONFIG = {
   HEO_HERO_TITLE_3: 'EASYDRAW.AC.CN',
   HEO_HERO_TITLE_4: '新人必看',
   HEO_HERO_TITLE_5: '社区指南助你快速成长',
-  HEO_HERO_TITLE_LINK: 'https://easydraw.ac.cn/newmumber',
+  HEO_HERO_TITLE_LINK: 'https://easydraw.ac.cn/about',
 
   // 英雄区显示三个置顶分类
   HEO_HERO_CATEGORY_1: { title: '必看精选', url: '/tag/必看精选' },
